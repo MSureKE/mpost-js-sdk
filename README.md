@@ -34,7 +34,7 @@ calls and parameters described in
 
 The following snippet is a generic example of how to use the SDK. If you need
 details for a specific module, refer to the
-[samples folder](https://github.com/ekbaya/mpost-js-sdk/tree/master/samples).
+[samples folder](https://github.com/MSureKE/mpost-js-sdk/blob/master/mpost-js-sdk-example/src/app.ts).
 
 Before executing any request, you need to authorize the calls to the API:
 
