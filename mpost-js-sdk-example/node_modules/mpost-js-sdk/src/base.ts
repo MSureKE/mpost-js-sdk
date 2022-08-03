@@ -11,12 +11,13 @@ export abstract class Base {
 
   constructor(config: Config) {
     this.apiKey = config.apiKey;
-    this.baseUrl = config.baseUrl || "https://jsonplaceholder.typicode.com";
+    this.baseUrl = config.baseUrl || "https://mpost-app.co.ke/api/client";
   }
 
   protected request<T>(endpoint: string, options?: RequestInit): Promise<T> {
     const url = `${this.baseUrl}${endpoint}`;
     const headers = {
+      "Accept": "application/json",
       "Content-Type": "application/json",
       "api-key": this.apiKey,
     };
@@ -30,6 +31,6 @@ export abstract class Base {
         return response.json();
       }
       throw new Error(response.statusText);
-    });
+    })
   }
 }

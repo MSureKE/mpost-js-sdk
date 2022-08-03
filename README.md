@@ -39,49 +39,10 @@ details for a specific module, refer to the
 Before executing any request, you need to authorize the calls to the API:
 
 
-#### Using a permanent token
+#### Using a API KEY
 ```js
 const mpost = new Mpost({
-  baseURL: "https//portal.mpost.com/api/",
-  permanentToken: "<token>",
-});
-```
-
-#### Using OAuth2
-
-1. Call the constructor with your configuration
-
-```js
-const mpost = new Mpost({
-  baseURL: "https://portal.mpost.com/api/",
-  clientId: "<your OAuth2 client id>",
-  clientSecret: "<your OAuth2 client secret>",
-  redirectUri: "<url where user will be redirected after authenticating>"
-});
-```
-
-2. Create an authorization URL, login and get one-time authorization code
-
-```js
-const authorizationURL = mpost.makeAuthorizationURL();
-```
-
-3. Exchange code for an access token
-
-```js
-mpost.getToken(code);
-```
-
-If you already have an access token, you can also initialize Bynder with the
-token directly:
-
-```js
-const mpost = new Mpost({
-  baseURL: "http://api-url.mpost.io/api/",
-  clientId: "<your OAuth2 client id>",
-  clientSecret: "<your OAuth2 client secret>",
-  redirectUri: "<url where user will be redirected after authenticating>",
-  token: "<OAuth2 access token>"
+  apiKey: "<Your-API-KEY>",
 });
 ```
 
@@ -99,17 +60,9 @@ API documentation to tune the query as intended.
 Get Delivery Requests
 
 ```js
-mpost
-  .getDeliveryRequests({
-    limit: 20,
-    page: 1
-  })
-  .then(data => {
-    // TODO Handle data
-  })
-  .catch(error => {
-    // TODO Handle the error
-  });
+mpost.getDeliveryRequests().then((p) => {
+  console.log(p);
+});
 ```
 
 Craete Delivery Request
@@ -164,11 +117,6 @@ mpost
 
 ## Available methods
 
-### Authentication
-
-- `makeAuthorizationURL()`
-- `getToken()`
-
 ### Delivery
 
 - `getDeliveryRequests(queryObject)`
@@ -182,22 +130,5 @@ are the steps necessary to prepare your environment:
 
 1. Clone the repository
 2. In the root folder, run `npm install` to install all of the dependencies.
-3. Create a `secret.json` file with the following structure:
-
-```json
-{
-  "baseURL": "http://api-url.bynder.io/api/",
-  "clientId": "<your OAuth2 client id>",
-  "clientSecret": "<your OAuth2 client secret>",
-  "redirectUri": "<url where user will be redirected after authenticating>"
-}
-```
-
-4. The following gulp tasks are available:
-
-- `gulp lint` - Run ESlint and check the code.
-- `gulp build` - Run webpack to bundle the code in order to run in a browser.
-- `gulp babel` - Run Babel to create a folder 'dist' with ES2015 compatible code.
-- `gulp doc` - Run JSDoc to create a 'doc' folder with automatically generated documentation for the source code.
-- `gulp webserver` - Deploy a web server from the root folder at
-  `localhost:8080` to run the html samples (in order to avoid CORS problems).
+3. The following build tasks are available:
+- `npm run build` - Run Microbundle to create a folder 'dist' with ES2015 compatible code.
