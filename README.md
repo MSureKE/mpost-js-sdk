@@ -65,7 +65,7 @@ mpost.getDeliveryRequests().then((p) => {
 });
 ```
 
-Craete Delivery Request
+Create  Delivery Request
 
 ```js
 mpost
