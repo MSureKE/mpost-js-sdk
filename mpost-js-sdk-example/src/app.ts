@@ -1,18 +1,18 @@
 import Mpost from "@ekbaya/mpost-js-sdk";
 
 const mpost: Mpost = new Mpost({
-  apiKey: "dd986892-170f-493d-9e50-b368b8218c32",
+  apiKey: "de6cad52-1605-446f-a167-14f845d8b5a0",
 });
 
 mpost.getDeliveryRequests().then((p) => {
-  console.log(`DATA: ${p}`);
+  console.log(`GET DELIVERY REQUESTS DATA======: ${JSON.stringify(p)}`);
 })
   .catch(error => {
     console.log(`You request could not be processed`);
   });
 
-mpost.getDeliveryRequestById(123).then((p) => {
-  console.log(`DATA: ${p}`);
+mpost.getDeliveryRequestById(130).then((p) => {
+  console.log(`GET DELIVERY REQUEST DATA=======: ${JSON.stringify(p)}`);
 })
   .catch(error => {
     console.log(`You request could not be processed`);
@@ -38,7 +38,7 @@ mpost
     pickup_time: "2022-02-02 11:11:00"
   })
   .then((p) => {
-    console.log(`Created new Delivery Request ${JSON.stringify(p)}`);
+    console.log(`CREATE DELIVERY REQUEST===== ${JSON.stringify(p)}`);
   })
   .catch(error => {
     console.log(`You request could not be processed`);
@@ -56,7 +56,7 @@ mpost
     }
   })
   .then((p) => {
-    console.log(`Data ${JSON.stringify(p)}`);
+    console.log(`CALCULATE DISTANCE DATA========: ${JSON.stringify(p)}`);
   })
   .catch(error => {
     console.log(`You request could not be processed`);

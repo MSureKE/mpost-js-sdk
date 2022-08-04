@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ekbaya/mpost-js-sdk": "^1.0.0"
+    "@ekbaya/mpost-js-sdk": "^1.0.1"
   }
 }
