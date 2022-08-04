@@ -19,9 +19,9 @@ responsible for dependency management.
 
 ### Node.js
 
-`npm install @mpost/mpost-js-sdk`
+`npm install @ekbaya/mpost-js-sdk`
 
-`import Mpost from '@mpost/mpost-js-sdk';`
+`import Mpost from '@ekbaya/mpost-js-sdk';`
 
 
 ## Usage
