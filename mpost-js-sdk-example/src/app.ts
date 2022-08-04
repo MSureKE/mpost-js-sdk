@@ -4,9 +4,19 @@ const mpost: Mpost = new Mpost({
   apiKey: "dd986892-170f-493d-9e50-b368b8218c32",
 });
 
-// mpost.getDeliveryRequests().then((p) => {
-//   console.log(p);
-// });
+mpost.getDeliveryRequests().then((p) => {
+  console.log(`DATA: ${p}`);
+})
+  .catch(error => {
+    console.log(`You request could not be processed`);
+  });
+
+mpost.getDeliveryRequestById(123).then((p) => {
+  console.log(`DATA: ${p}`);
+})
+  .catch(error => {
+    console.log(`You request could not be processed`);
+  });
 
 mpost
   .createDeliveryRequest({
