@@ -80,7 +80,6 @@ Create  Delivery Request
 ```js
 mpost
   .createDeliveryRequest({
-    user_id: "1"
     pickup_address: {
         latitude: 37.785834,
         longitude: -122.406417,

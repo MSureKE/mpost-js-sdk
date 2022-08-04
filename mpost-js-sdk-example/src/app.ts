@@ -20,7 +20,6 @@ mpost.getDeliveryRequestById(123).then((p) => {
 
 mpost
   .createDeliveryRequest({
-    user_id: "1",
     pickup_address: {
       latitude: "37.785834",
       longitude: "-122.406417",
@@ -35,7 +34,7 @@ mpost
     },
     recipient_name: "",
     recipient_mobile: "0712345678",
-    item_type: "Test",
+    item_type: "Food",
     pickup_time: "2022-02-02 11:11:00"
   })
   .then((p) => {
