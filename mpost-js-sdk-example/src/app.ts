@@ -1,9 +1,11 @@
 import Mpost from "@ekbaya/mpost-js-sdk";
 
+//SDK Initialization
 const mpost: Mpost = new Mpost({
   apiKey: "de6cad52-1605-446f-a167-14f845d8b5a0",
 });
 
+//Testing Delivery Requests
 mpost.getDeliveryRequests().then((p) => {
   console.log(`GET DELIVERY REQUESTS DATA======: ${JSON.stringify(p)}`);
 })
@@ -11,6 +13,7 @@ mpost.getDeliveryRequests().then((p) => {
     console.log(`You request could not be processed`);
   });
 
+//Get A single Delivery Request
 mpost.getDeliveryRequestById(130).then((p) => {
   console.log(`GET DELIVERY REQUEST DATA=======: ${JSON.stringify(p)}`);
 })
@@ -18,6 +21,7 @@ mpost.getDeliveryRequestById(130).then((p) => {
     console.log(`You request could not be processed`);
   });
 
+//Create A new Delivery Request
 mpost
   .createDeliveryRequest({
     pickup_address: {
@@ -44,6 +48,8 @@ mpost
     console.log(`You request could not be processed`);
   });
 
+
+//Calculating Distance and Cost of delivery Request
 mpost
   .calculateDistance({
     pickup_address: {
