@@ -65,6 +65,16 @@ mpost.getDeliveryRequests().then((p) => {
 });
 ```
 
+Get A Single Delivery Request
+```js
+mpost.getDeliveryRequestById(123).then((p) => {
+  console.log(`DATA: ${p}`);
+})
+  .catch(error => {
+    console.log(`You request could not be processed`);
+  });
+```
+
 Create  Delivery Request
 
 ```js
@@ -121,6 +131,7 @@ mpost
 ### Delivery
 
 - `getDeliveryRequests(queryObject)`
+- `getDeliveryRequestById(queryObject)`
 - `createDeliveryRequest(queryObject)`
 - `calculateDistance(queryObject)`
 
