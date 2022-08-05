@@ -134,12 +134,5 @@ mpost
 - `createDeliveryRequest(queryObject)`
 - `calculateDistance(queryObject)`
 
-## Contribute to the SDK
-
-If you wish to contribute to this repository and further extend the API coverage in the SDK, here
-are the steps necessary to prepare your environment:
-
-1. Clone the repository
-2. In the root folder, run `npm install` to install all of the dependencies.
-3. The following build tasks are available:
-- `npm run build` - Run Microbundle to create a folder 'dist' with ES2015 compatible code.
+## Case Study
+![Creating Delivery Request](use-case.png)
