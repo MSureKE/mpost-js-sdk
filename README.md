@@ -134,5 +134,5 @@ mpost
 - `createDeliveryRequest(queryObject)`
 - `calculateDistance(queryObject)`
 
-## Case Study
+## Creating Delivery Request Case Study
 ![Creating Delivery Request](use-case.png)
